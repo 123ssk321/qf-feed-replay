@@ -18,4 +18,8 @@ Golden vectors, coverage of declared message subset, malformed input behavior, r
 
 Reusable feed-adapter component is plausible; adoption requires an integration pain and license-compatible redistribution. If feed access or protocol semantics are ambiguous, publish strict decoder and synthetic replay rather than a market-ready adapter.
 
-Planning source: quant-finance/QUANT_HIGH_EFFORT.md, assessed 19 October 2026. Source links and data cautions are in that report.
+## Source links and data cautions
+
+An [official Nasdaq sample notice](https://www.nasdaqtrader.com/TraderNews.aspx?id=nva2008-091) identifies a documented sample path. Nasdaq's [historical ITCH FAQ](https://www.nasdaqtrader.com/Content/TechnicalSupport/FAQs/ITCH_FAQ.pdf) describes multi-gigabyte daily files. Confirm protocol version and redistribution terms before using any sample; generated fixtures remain the first test input.
+
+Planning assessment: 19 October 2026.
