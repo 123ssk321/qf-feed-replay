@@ -1,0 +1,573 @@
+{
+  "project_slug": "feed-replay",
+  "first_public_result_month": 3,
+  "total_hours": 420,
+  "reserve_hours": 120,
+  "status": "queued",
+  "milestones": [
+    {
+      "id": "QF-M1",
+      "title": "Protocol and fixture contract",
+      "description": "Relative to explicit activation: Months 1–2; 50 task hours + 20 reserve; cumulative 70 hours. Tasks QF-001–QF-005. Exit requires reviewed evidence for each task and a continue/narrow/park decision. Dates stay blank while queued.",
+      "window": "Months 1–2",
+      "work_hours": 50,
+      "reserve_hours": 20,
+      "cumulative_hours": 70
+    },
+    {
+      "id": "QF-M2",
+      "title": "Decoder and normalizer slice",
+      "description": "Relative to explicit activation: Months 1–2; 50 task hours + 20 reserve; cumulative 140 hours. Tasks QF-006–QF-010. Exit requires reviewed evidence for each task and a continue/narrow/park decision. Dates stay blank while queued.",
+      "window": "Months 1–2",
+      "work_hours": 50,
+      "reserve_hours": 20,
+      "cumulative_hours": 140
+    },
+    {
+      "id": "QF-M3",
+      "title": "First public replay artifact",
+      "description": "Relative to explicit activation: Month 3; 50 task hours + 18 reserve; cumulative 208 hours. Tasks QF-011–QF-015. Exit requires reviewed evidence for each task and a continue/narrow/park decision. Dates stay blank while queued.",
+      "window": "Month 3",
+      "work_hours": 50,
+      "reserve_hours": 18,
+      "cumulative_hours": 208
+    },
+    {
+      "id": "QF-M4",
+      "title": "Sequence and fault recovery",
+      "description": "Relative to explicit activation: Months 5–7; 50 task hours + 22 reserve; cumulative 280 hours. Tasks QF-016–QF-020. Exit requires reviewed evidence for each task and a continue/narrow/park decision. Dates stay blank while queued.",
+      "window": "Months 5–7",
+      "work_hours": 50,
+      "reserve_hours": 22,
+      "cumulative_hours": 280
+    },
+    {
+      "id": "QF-M5",
+      "title": "Profiling and integration",
+      "description": "Relative to explicit activation: Months 6–8; 50 task hours + 20 reserve; cumulative 350 hours. Tasks QF-021–QF-025. Exit requires reviewed evidence for each task and a continue/narrow/park decision. Dates stay blank while queued.",
+      "window": "Months 6–8",
+      "work_hours": 50,
+      "reserve_hours": 20,
+      "cumulative_hours": 350
+    },
+    {
+      "id": "QF-M6",
+      "title": "Stable library and adoption decision",
+      "description": "Relative to explicit activation: Months 7–12; 50 task hours + 20 reserve; cumulative 420 hours. Tasks QF-026–QF-030. Exit requires reviewed evidence for each task and a continue/narrow/park decision. Dates stay blank while queued.",
+      "window": "Months 7–12",
+      "work_hours": 50,
+      "reserve_hours": 20,
+      "cumulative_hours": 420
+    }
+  ],
+  "issues": [
+    {
+      "id": "QF-001",
+      "title": "Select one protocol version",
+      "body": "## Goal\nSelect one protocol version for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Pin specification revision, transport framing and supported messages.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `docs/PROTOCOL_SCOPE.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nUnsupported message behavior is explicit. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nNone beyond activation. Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M1",
+      "depends_on": [],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "QF-002",
+      "title": "Record sample rights",
+      "body": "## Goal\nRecord sample rights for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Inspect protocol and sample terms with synthetic alternative.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `docs/DATA_RIGHTS.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nPublication assets have recorded rights. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-001 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M1",
+      "depends_on": [
+        "QF-001"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "QF-003",
+      "title": "Specify normalized schema",
+      "body": "## Goal\nSpecify normalized schema for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Define types, units, event time and sequence metadata.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `docs/SCHEMA.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nSchema is versioned and loss is documented. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-002 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M1",
+      "depends_on": [
+        "QF-002"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "QF-004",
+      "title": "Define benchmark boundaries",
+      "body": "## Goal\nDefine benchmark boundaries for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Separate disk, framing, decode, normalize and replay timing.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `docs/BENCHMARK.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\np50/p99 definition is reproducible. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-003 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M1",
+      "depends_on": [
+        "QF-003"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "QF-005",
+      "title": "Build fixture generator",
+      "body": "## Goal\nBuild fixture generator for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Generate valid binary messages from controlled fields.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `tools/generate_fixture.cpp`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nSeed and spec version reproduce bytes. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-004 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M1",
+      "depends_on": [
+        "QF-004"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "QF-006",
+      "title": "Implement framing parser",
+      "body": "## Goal\nImplement framing parser for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Validate lengths and boundaries before field reads.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `src/framing.cpp`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nTruncated and overlong frames fail safely. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-005 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M2",
+      "depends_on": [
+        "QF-005"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:prototype"
+      ],
+      "phase": "prototype"
+    },
+    {
+      "id": "QF-007",
+      "title": "Decode core messages",
+      "body": "## Goal\nDecode core messages for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Parse selected event types into typed records.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `src/decode.cpp`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nGolden vectors match expected fields. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-006 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M2",
+      "depends_on": [
+        "QF-006"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:prototype"
+      ],
+      "phase": "prototype"
+    },
+    {
+      "id": "QF-008",
+      "title": "Add endian and overflow checks",
+      "body": "## Goal\nAdd endian and overflow checks for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Cover byte order, integer width and arithmetic bounds.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `tests/test_decode.cpp`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nMalformed values cannot corrupt state. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-007 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M2",
+      "depends_on": [
+        "QF-007"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:prototype"
+      ],
+      "phase": "prototype"
+    },
+    {
+      "id": "QF-009",
+      "title": "Implement schema mapping",
+      "body": "## Goal\nImplement schema mapping for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Convert decoded records with no silent field loss.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `src/normalize.cpp`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nMapped record round-trip checks pass. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-008 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M2",
+      "depends_on": [
+        "QF-008"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:prototype"
+      ],
+      "phase": "prototype"
+    },
+    {
+      "id": "QF-010",
+      "title": "Build slow reference parser",
+      "body": "## Goal\nBuild slow reference parser for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Implement independent clarity-first decoder.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `tests/reference_parser.py`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nDifferential output matches on valid fixtures. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-009 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M2",
+      "depends_on": [
+        "QF-009"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:prototype"
+      ],
+      "phase": "prototype"
+    },
+    {
+      "id": "QF-011",
+      "title": "Add deterministic replay CLI",
+      "body": "## Goal\nAdd deterministic replay CLI for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Read fixtures and export normalized stream.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `src/replay.cpp`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nRepeated replay has same output hash. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-010 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M3",
+      "depends_on": [
+        "QF-010"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "QF-012",
+      "title": "Publish first replay artifact",
+      "body": "## Goal\nPublish first replay artifact for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Release supported subset, fixtures, commands and limitations.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `reports/alpha.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nPublic result exists by month three. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-011 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M3",
+      "depends_on": [
+        "QF-011"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "QF-013",
+      "title": "Implement sequence tracking",
+      "body": "## Goal\nImplement sequence tracking for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Detect duplicate, missing and out-of-order messages.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `src/sequence.cpp`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nEach gap class has a golden test. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-012 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M3",
+      "depends_on": [
+        "QF-012"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "QF-014",
+      "title": "Add snapshot recovery contract",
+      "body": "## Goal\nAdd snapshot recovery contract for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Define behavior after gaps before stateful processing.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `docs/RECOVERY.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nUnrecovered state is never marked valid. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-013 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M3",
+      "depends_on": [
+        "QF-013"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "QF-015",
+      "title": "Build bounded book state",
+      "body": "## Goal\nBuild bounded book state for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Apply only semantics supported by chosen feed.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `src/book.cpp`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nState matches small hand-built sequences. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-014 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M3",
+      "depends_on": [
+        "QF-014"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "QF-016",
+      "title": "Fuzz decoder inputs",
+      "body": "## Goal\nFuzz decoder inputs for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Run deterministic and randomized malformed packet corpus.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `tests/fuzz_decode.cpp`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nNo crash, hang or unchecked read in budget. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-015 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M4",
+      "depends_on": [
+        "QF-015"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "QF-017",
+      "title": "Test session boundaries",
+      "body": "## Goal\nTest session boundaries for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Handle open/close and sequence reset semantics.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `tests/test_session.cpp`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nCross-session state is explicit. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-016 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M4",
+      "depends_on": [
+        "QF-016"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "QF-018",
+      "title": "Check sample interoperability",
+      "body": "## Goal\nCheck sample interoperability for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Compare permitted official sample messages to reference.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `reports/sample-check.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nCoverage and unsupported types are counted. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-017 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M4",
+      "depends_on": [
+        "QF-017"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "QF-019",
+      "title": "Profile hot path",
+      "body": "## Goal\nProfile hot path for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Collect CPU samples and allocation counts.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `benchmarks/profile.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nBottlenecks are measured, not guessed. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-018 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M4",
+      "depends_on": [
+        "QF-018"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "QF-020",
+      "title": "Measure throughput distribution",
+      "body": "## Goal\nMeasure throughput distribution for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Record bounded sustained and burst replay stats.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `benchmarks/throughput.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nHardware, input mix and p50/p99 are disclosed. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-019 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M4",
+      "depends_on": [
+        "QF-019"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "QF-021",
+      "title": "Bound memory and backpressure",
+      "body": "## Goal\nBound memory and backpressure for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Test queue capacities and load shedding behavior.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `tests/test_backpressure.cpp`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nNo silent event loss or unbounded growth. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-020 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M5",
+      "depends_on": [
+        "QF-020"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "QF-022",
+      "title": "Document Trading Lab adapter",
+      "body": "## Goal\nDocument Trading Lab adapter for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Map normalized schema to existing catalog contract.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `docs/ADAPTER.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nAdapter remains optional and isolated. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-021 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M5",
+      "depends_on": [
+        "QF-021"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "QF-023",
+      "title": "Package C++ library",
+      "body": "## Goal\nPackage C++ library for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Provide build, install and API examples.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `CMakeLists.txt`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nClean Windows/Linux supported build reproduces. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-022 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M5",
+      "depends_on": [
+        "QF-022"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "QF-024",
+      "title": "Run portability checks",
+      "body": "## Goal\nRun portability checks for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Test compiler versions and integer assumptions.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `reports/portability.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nKnown platform differences are listed. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-023 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M5",
+      "depends_on": [
+        "QF-023"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "QF-025",
+      "title": "Audit error reporting",
+      "body": "## Goal\nAudit error reporting for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Give actionable parse/sequence diagnostics.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `docs/ERRORS.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nEvery rejected fixture names reason and position. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-024 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M5",
+      "depends_on": [
+        "QF-024"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "QF-026",
+      "title": "Compare reference parser",
+      "body": "## Goal\nCompare reference parser for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Report field and error-code agreement on test corpus.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `reports/differential.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nDisagreements are resolved or documented. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-025 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M6",
+      "depends_on": [
+        "QF-025"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    },
+    {
+      "id": "QF-027",
+      "title": "Review protocol coverage",
+      "body": "## Goal\nReview protocol coverage for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Tabulate supported messages and extension seam.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `docs/COVERAGE.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nNo full-feed claim beyond counted coverage. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-026 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M6",
+      "depends_on": [
+        "QF-026"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    },
+    {
+      "id": "QF-028",
+      "title": "Write CV case study",
+      "body": "## Goal\nWrite CV case study for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Explain correctness, latency and resource tradeoffs.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `reports/case-study.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nNumbers trace to exact commands and hardware. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-027 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M6",
+      "depends_on": [
+        "QF-027"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    },
+    {
+      "id": "QF-029",
+      "title": "Test adoption workflow",
+      "body": "## Goal\nTest adoption workflow for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Exercise one integrator task with public fixtures.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `reports/workflow.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nTask completion and friction are recorded. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-028 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M6",
+      "depends_on": [
+        "QF-028"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    },
+    {
+      "id": "QF-030",
+      "title": "Decide next protocol/product",
+      "body": "## Goal\nDecide next protocol/product for Feed Replay C++, within 10 hours including checks and documentation.\n\n## Steps\n1. Record continue, narrow or park based on evidence.\n2. Check the product boundary: Decode one documented feed, validate sequence and malformed input, normalize versioned records, and replay reproducibly. It is a bounded engineering library, not a production exchange gateway.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `docs/PRODUCT_DECISION.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nNo unverified commercial or HFT claim. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQF-029 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 10,
+      "milestone": "QF-M6",
+      "depends_on": [
+        "QF-029"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    }
+  ]
+}
